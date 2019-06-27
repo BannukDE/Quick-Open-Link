@@ -40,9 +40,7 @@ function quickOpenLink()
 			}
 		}
 	const
-		_=this,
-		root=document.getElementById('app-mount'),
-		section=root.getElementsByTagName('section')[0];
+		_=this;
 	_.getName=()=>'Quick Link Open';
 	_.getDescription=()=>'Ctrl+Click to open attachments in your browser';
 	_.getVersion=()=>'0.3';
@@ -50,10 +48,10 @@ function quickOpenLink()
 	_.load=()=>{};
 	_.start=function()
 		{
-		section.addEventListener('click',checkClick);
+		document.addEventListener('click',checkClick);
 		};
 	_.stop=function()
 		{
-		section.removeEventListener('click',checkClick);
+		document.removeEventListener('click',checkClick);
 		};
 	}
